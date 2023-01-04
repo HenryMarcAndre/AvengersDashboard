@@ -4,6 +4,9 @@ from PIL import Image
 
 st.set_page_config(layout='wide')
 
+logo = Image.open('avengerslogo.png')
+st.image(logo, width = 150)
+
 df = pd.read_csv("charcters_stats.csv")
 
 avengers = df[(df.Name == "Iron Man") | (df.Name == "Captain America") | (df.Name == "Spider-Man") | (df.Name == "Hulk") | (df.Name == "War Machine") | (df.Name == "Vision") | (df.Name == "Black Panther") | (df.Name == "Ant-Man")].reset_index(drop=True)
